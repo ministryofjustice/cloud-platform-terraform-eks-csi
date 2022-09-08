@@ -24,7 +24,7 @@ See the [examples/](examples/) folder.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_ebs_irsa"></a> [ebs\_irsa](#module\_ebs\_irsa) | github.com/ministryofjustice/cloud-platform-terraform-irsa | 1.0.2 |
+| <a name="module_ebs_irsa"></a> [ebs\_irsa](#module\_ebs\_irsa) | github.com/ministryofjustice/cloud-platform-terraform-irsa | 1.0.3 |
 
 ## Resources
 
