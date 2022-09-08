@@ -7,6 +7,42 @@ EKS CSI storage backend for Kubernetes (EBS volumes). Required for GP3 support a
 See the [examples/](examples/) folder.
 
 <!--- BEGIN_TF_DOCS --->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.14 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+| <a name="provider_helm"></a> [helm](#provider\_helm) | n/a |
+
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_ebs_irsa"></a> [ebs\_irsa](#module\_ebs\_irsa) | github.com/ministryofjustice/cloud-platform-terraform-irsa | 1.0.2 |
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [aws_iam_policy.ebs_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
+| [helm_release.aws_ebs](https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release) | resource |
+| [aws_iam_policy_document.ebs_doc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_eks_cluster"></a> [eks\_cluster](#input\_eks\_cluster) | cluster name | `string` | n/a | yes |
+
+## Outputs
+
+No outputs.
 
 <!--- END_TF_DOCS --->
 
