@@ -1,4 +1,3 @@
-
 resource "helm_release" "aws_ebs" {
   name       = "aws-ebs-csi-driver"
   chart      = "aws-ebs-csi-driver"
