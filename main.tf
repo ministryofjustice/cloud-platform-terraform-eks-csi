@@ -1,3 +1,4 @@
+
 resource "helm_release" "aws_ebs" {
   name       = "aws-ebs-csi-driver"
   chart      = "aws-ebs-csi-driver"
@@ -5,10 +6,6 @@ resource "helm_release" "aws_ebs" {
   namespace  = "kube-system"
   version    = "2.10.1"
 
-  set {
-    name  = "controller.serviceAccount.create"
-    value = "false"
-  }
-
-  depends_on = [module.ebs_irsa]
+  values = [templatefile("${path.module}/templates/values.yaml.tpl", {
+  })]
 }
