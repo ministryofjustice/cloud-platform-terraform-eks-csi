@@ -10,5 +10,15 @@ resource "helm_release" "aws_ebs" {
     value = "false"
   }
 
+  dynamic "toleration" {
+    for_each = var.tolerations
+    content {
+      key      = toleration.value["key"]
+      operator = toleration.value["operator"]
+      value    = toleration.value["value"]
+      effect   = toleration.value["effect"]
+    }
+  }
+
   depends_on = [module.ebs_irsa]
 }
