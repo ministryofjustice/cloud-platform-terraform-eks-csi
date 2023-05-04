@@ -10,14 +10,21 @@ resource "helm_release" "aws_ebs" {
     value = "false"
   }
 
-  dynamic "toleration" {
-    for_each = var.tolerations
-    content {
-      key      = toleration.value["key"]
-      operator = toleration.value["operator"]
-      value    = toleration.value["value"]
-      effect   = toleration.value["effect"]
-    }
+  set {
+    name  = "controller.tolerations[0].key"
+    value = "monitoring-node"
+  }
+  set {
+    name  = "controller.tolerations[0].value"
+    value = "true"
+  }
+  set {
+    name  = "controller.tolerations[0].operator"
+    value = "Equal"
+  }
+  set {
+    name  = "controller.tolerations[0].effect"
+    value = "NoSchedule"
   }
 
   depends_on = [module.ebs_irsa]
