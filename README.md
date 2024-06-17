@@ -45,7 +45,6 @@ See the [examples/](examples/) folder.
 ## Outputs
 
 No outputs.
-
 <!-- END_TF_DOCS -->
 
 ## Tags
