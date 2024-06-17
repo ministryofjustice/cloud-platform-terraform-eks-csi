@@ -6,7 +6,7 @@ EKS CSI storage backend for Kubernetes (EBS volumes). Required for GP3 support a
 
 See the [examples/](examples/) folder.
 
-<!--- BEGIN_TF_DOCS --->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -45,8 +45,7 @@ See the [examples/](examples/) folder.
 ## Outputs
 
 No outputs.
-
-<!--- END_TF_DOCS --->
+<!-- END_TF_DOCS -->
 
 ## Tags
 
