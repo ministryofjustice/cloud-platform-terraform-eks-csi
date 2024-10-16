@@ -202,7 +202,7 @@ resource "aws_iam_policy" "ebs_policy" {
 }
 
 module "ebs_irsa" {
-  source = "github.com/ministryofjustice/cloud-platform-terraform-irsa?ref=1.0.3"
+  source = "github.com/ministryofjustice/cloud-platform-terraform-irsa?ref=2.0.0"
 
   eks_cluster      = var.eks_cluster
   namespace        = "kube-system"
